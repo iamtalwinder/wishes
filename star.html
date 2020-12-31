@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/css/index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Caveat"
+    />
+    <link rel="icon" href="./assets/imgs/star.svg" />
+    <title>Happy new year</title>
+    <meta
+      name="description"
+      content="My way of wishing you happy new year"
+    ></meta>
+    
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="center">
+      <p id="message">
+        May your life be as bright as Sun 🌄, as beautiful as flowers 🌻, and you be showered with
+         blessings and happiness 😋. Happy New Year 2021
+      </p>
+
+      <div id="start" onclick="removeStart()">
+        <img src="./assets/imgs/star.svg" alt="heart" />
+        <p>Click Me</p>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          //red green yellow red
+          value: ["#E01E5B", "#2EB67D", "#ECB22E", "#E01E5B"],
+        },
+        shape: {
+          type: "star",
+          stroke: {
+            width: 0,
+            color: "#fff",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+        },
+
+        opacity: {
+          value: 1,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 0,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 12,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 10,
+            size_min: 10,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: false,
+          distance: 150,
+          color: "#fff",
+          opacity: 0.4,
+        },
+        move: {
+          enable: true,
+          speed: 5,
+          direction: "bottom",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "window",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
+          },
+        },
+        modes: {
+          repulse: {
+            distance: 70,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+        },
+      },
+      retina_detect: true,
+    });
+  </script>
+</html>
